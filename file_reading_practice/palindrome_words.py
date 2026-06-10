@@ -51,3 +51,14 @@ Explanation:
 =================================================
 
 """
+palindromes = []
+
+with open("file_reading_practice/sowpods.txt") as file:
+    for word in file:
+        word = word.strip().lower()
+        if word == word[::-1] and len(word) > 0:
+                palindromes.append(word)
+
+for word in palindromes:
+    print(word)
+print("Total palindromes:",len(palindromes))
